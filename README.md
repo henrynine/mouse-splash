@@ -1,2 +1,2 @@
 # mouse-splash
-This is a jQuery learning project. Draggin the mouse around colors the squares on the screen.
+This is a jQuery learning project. Dragging the mouse around colors the squares on the screen.
