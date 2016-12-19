@@ -1,3 +1,6 @@
+rainbowColors = ['red', 'orange', 'yellow', 'lime', 'blue', 'indigo']
+rainbowCounter = 0
+
 $(document).ready(function() {
 
   makeGrid(50, 50);
@@ -39,7 +42,7 @@ function makeGrid(h, w) {
   $('.square').mouseenter(function() {
     console.log('yes');
     if (drawing==true) {
-      $(this).css('background-color', 'black');
+      colorRainbow($(this));
       console.log('yes');
     }
   });
@@ -48,4 +51,17 @@ function makeGrid(h, w) {
     drawing = !drawing;
   });
 
+}
+
+function colorBlack(element) {
+  element.css('background-color', 'black')
+}
+
+function colorRandomRainbow(element) {
+  element.css('background-color', rainbowColors[Math.floor(Math.random() * rainbowColors.length)])
+}
+
+function colorRainbow(element) {
+  element.css('background-color', rainbowColors[rainbowCounter % rainbowColors.length])
+  rainbowCounter++;
 }
